@@ -87,7 +87,7 @@ class Service(LogService):
         else:
             self.reRelay = re.compile(f'relay={self.relay}')
 
-        filter_relay = self.configuration.get('email_counter_relay', 'pbfilter')
+        filter_relay = self.configuration.get('email_counter_relay', '127.0.0.1')
         self.reFilterRelay = re.compile(f'relay={filter_relay}')
 
 
